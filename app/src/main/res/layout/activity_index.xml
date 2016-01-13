@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.maincode.index.IndexActivity">
+
+    <FrameLayout
+        android:id="@+id/flContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/blue_5b5184"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_button0"
+                style="@style/tab_bottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/nearby_tab_bg"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:text="附近" />
+
+            <RadioButton
+                android:id="@+id/radio_button1"
+                style="@style/tab_bottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/club_tab_bg"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:text="车友会" />
+
+            <RadioButton
+                android:id="@+id/radio_button2"
+                style="@style/tab_bottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/found_tab_bg"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:text="发现" />
+
+            <RadioButton
+                android:id="@+id/radio_button3"
+                style="@style/tab_bottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/message_tab_bg"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:text="消息" />
+
+            <RadioButton
+                android:id="@+id/radio_button4"
+                style="@style/tab_bottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/personal_tab_bg"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:text="我" />
+        </RadioGroup>
+    </LinearLayout>
+</RelativeLayout>

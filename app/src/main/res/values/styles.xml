@@ -1,0 +1,6 @@
+<resources>
+    <style name="tab_bottom">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@drawable/tab_text_bg</item>
+    </style>
+</resources>
