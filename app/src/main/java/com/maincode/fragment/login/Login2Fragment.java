@@ -51,7 +51,6 @@ public class Login2Fragment extends Fragment implements View.OnClickListener, UI
         return v;
     }
 
-
     private void init() {
         headBar = (HeadBar) v.findViewById(R.id.headBar);
         headBar.onclick(this);
