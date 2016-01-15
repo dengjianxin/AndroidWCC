@@ -42,7 +42,6 @@ public class Login2Fragment extends Fragment implements View.OnClickListener, UI
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
