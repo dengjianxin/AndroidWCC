@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_app"
+    tools:context="com.maincode.fragment.login.Login1Fragment">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp">
+
+        <Button
+            android:id="@+id/btnRegistered"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#298BF6"
+            android:text="注册"
+            android:onClick="onClick"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnRegistered"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:background="#DEDEDE" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="使用第三方登录"
+                android:textColor="#DEDEDE"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:background="#DEDEDE" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivWeixin"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:onClick="onClick"
+                android:background="@drawable/bg_weixin" />
+
+            <ImageView
+                android:id="@+id/ivQQ"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="30dp"
+                android:onClick="onClick"
+                android:background="@drawable/bg_qq" />
+
+            <ImageView
+                android:id="@+id/ivSin"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="30dp"
+                android:onClick="onClick"
+                android:background="@mipmap/icon_sin" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llLogin"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已注册，去"
+                android:textColor="#DEDEDE"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvDes"
+                android:text="登录"
+                android:textColor="#ffffff"
+                android:onClick="onClick"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

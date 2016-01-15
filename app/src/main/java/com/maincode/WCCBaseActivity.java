@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 //import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.risen.androidwcc.R;
@@ -17,7 +18,10 @@ import com.util.SystemParams;
 import com.util.volley.UIDataListener;
 import com.util.volley.VolleyQueueController;
 
-public class WCCBaseActivity extends FragmentActivity implements UIDataListener<HttpBaseModel> {
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class WCCBaseActivity extends FragmentActivity implements UIDataListener<HttpBaseModel>, View.OnClickListener {
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -85,5 +89,30 @@ public class WCCBaseActivity extends FragmentActivity implements UIDataListener<
                 dialog.dismiss();
             }
         });
+    }
+
+    boolean bl = false;
+
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                bl = false;
+            }
+        }, 5000, 5000);
+        if (bl) {
+            System.exit(0);
+        } else {
+            showToast("再按一次退出玩车车");
+        }
+        bl = true;
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

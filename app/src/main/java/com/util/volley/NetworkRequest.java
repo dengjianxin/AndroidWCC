@@ -55,7 +55,7 @@ public class NetworkRequest extends JsonRequest<JSONObject> {
                     encodedParams.append('&');
 
                 }
-                return encodedParams.toString();
+                return encodedParams.toString().substring(0, encodedParams.toString().length() - 1);
             } catch (UnsupportedEncodingException uee) {
                 throw new RuntimeException("Encoding not supported: "
                         + paramsEncoding, uee);

@@ -11,8 +11,10 @@ import java.util.Map;
 
 import org.apache.http.NameValuePair;
 import org.json.JSONObject;
+
 import android.content.Context;
 import android.util.Log;
+
 import com.android.volley.Request.Method;
 import com.android.volley.Response;
 import com.android.volley.Response.ErrorListener;
@@ -36,7 +38,6 @@ public abstract class NetworkHelper<T> implements Response.Listener<JSONObject>,
         } else {
             return new NetworkRequest(url, params, this, this);
         }
-
     }
 
     protected NetworkRequest getRequestForPost(String url, Map<String, String> params) {
@@ -55,7 +56,7 @@ public abstract class NetworkHelper<T> implements Response.Listener<JSONObject>,
 
     @Override
     public void onErrorResponse(VolleyError error) {
-        Log.d("Amuro", error.getMessage());
+        Log.d("Amuro", error.networkResponse.statusCode + "");
         disposeVolleyError(error);
     }
 

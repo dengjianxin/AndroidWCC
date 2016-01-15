@@ -35,9 +35,10 @@ public class ReverseRegisterNetworkHelper extends NetworkHelper<HttpBaseModel> {
 
     @Override
     protected void disposeVolleyError(VolleyError error) {
-        notifyErrorHappened(
-                "",
-                error == null ? "NULL" : error.getMessage());
+        notifyErrorHappened("", error == null ? "NULL" : error.getMessage());
+        /*数据请求完成，发送广播关闭加载框*/
+        Intent intent = new Intent("LoadDialoge");
+        mContext.sendBroadcast(intent);
     }
 
     @Override
